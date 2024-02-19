@@ -1,0 +1,245 @@
+@property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar {
+  background-color: rgb(192, 192, 192);
+  width: 10px;
+}
+
+.shadow-box {
+  -webkit-box-shadow: 3px 3px 11px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 11px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 11px -2px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-card {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.hero-section {
+  background-image: url("../public/images/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-banner {
+  background-image: url("../public/images/bg-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.courses,
+.users,
+.members {
+  transition: --num 5s;
+  counter-reset: num var(--num);
+}
+
+.courses::before,
+.users::before,
+.members::before {
+  content: counter(num);
+}
+
+/* pagination */
+
+.pagination ul {
+  display: flex;
+  margin: 20px 0;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  gap: 6px;
+  background: linear-gradient(to bottom right, rgb(47, 47, 211), aqua);
+  width: 500px;
+  margin: auto;
+}
+
+.selected {
+  border: 2px blue solid;
+}
+
+.pagination ul li {
+  width: fit-content;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width : 624px) {
+  .pagination ul li {
+    padding: 5px 10px;
+  }
+
+  .pagination ul {
+    padding: 5px 0;
+    gap: 6px;
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+.animate {
+  animation: show 50ms linear 5s;
+}
+
+@keyframes show {
+  from {
+    display: hidden;
+  }
+
+  to {
+    display: block;
+  }
+}
+
+.course-card .grid-cols-1 .course-card-data {
+  min-height: 200px;
+}
+
+.course-card .grid-cols-1 img {
+  height: 200px;
+  width: 200px;
+}
+
+.first-box {
+  transform: translate(-60px, -60px);
+  animation: loaderanimate 8s linear infinite;
+}
+
+.second-box {
+  transform: translate(-60px, -60px);
+  animation: loaderanimate 4s linear infinite;
+}
+
+.third-box {
+  transform: translate(-60px, -60px);
+  animation: loaderanimate 4s linear infinite;
+}
+
+.forth-box {
+  transform: translate(-60px, -60px);
+  animation: loaderanimate 4s linear infinite;
+}
+
+/* Preloader */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ring {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border: 0px solid black;
+  border-radius: 50%;
+}
+
+.ring:nth-child(1) {
+  border-bottom-width: 10px;
+  border-color: #ca2c92;
+  animation: rotate1 1.5s linear infinite;
+}
+
+.ring:nth-child(2) {
+  border-right-width: 10px;
+  border-color: #00ffff;
+  animation: rotate2 1.5s linear infinite;
+}
+
+.ring:nth-child(3) {
+  border-top-width: 10px;
+  border-color: #E0E722;
+  animation: rotate3 1.5s linear infinite;
+}
+
+
+@keyframes rotate1 {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg)
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg)
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg)
+  }
+
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg)
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg)
+  }
+
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg)
+  }
+}
+
+.loader {
+  position: relative;
+}
+
+.dot {
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #000;
+  animation: bounce 1.3s linear infinite;
+}
+
+.dot:nth-child(1) {
+  left: -1.5rem;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.dot:nth-child(3) {
+  right: -2.5rem;
+  animation-delay: -0.8s;
+}
+
+@keyframes bounce {
+
+  0%,
+  66%,
+  100% {
+    transform: initial;
+  }
+
+  33% {
+    transform: translatey(-1rem);
+  }
+}
