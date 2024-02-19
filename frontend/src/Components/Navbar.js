@@ -75,11 +75,11 @@ const Navbar = () => {
                     <img className='h-full w-full object-contain' src="images/logo.jpg" alt="" />
                 </div>
                 <ul className='nav-items hidden lg:flex lg:gap-6 xl:gap-8 items-center font-semibold cursor-pointer'>
-                    <li className='hover:text-red-600 text-[18px] text-white transition-all duration-200' onClick={e=>setHam(false)><Link reloadDocument to={"/"}>Home</Link></li>
-                    <li className='hover:text-red-600 text-[18px] text-white transition-all duration-200' onClick={e=>setHam(false)><Link reloadDocument to={"courses"}>Courses</Link></li>
-                    <li className='hover:text-red-600 text-[18px] text-white transition-all duration-200' onClick={e=>setHam(false)><Link reloadDocument to={"about"}>About Us</Link></li>
-                    <li className='hover:text-red-600 text-[18px] text-white  transition-all duration-200' onClick={e=>setHam(false)><Link reloadDocument to={"contact"}>Contact Us</Link></li>
-                    <li  className='hover:text-red-600 text-[18px] text-white  transition-all duration-200' onClick={e=>setHam(false)><Link reloadDocument to={"faqs"}>Faqs</Link></li>
+                    <li className='hover:text-red-600 text-[18px] text-white transition-all duration-200' onClick={e=>setHam(false)}><Link reloadDocument to={"/"}>Home</Link></li>
+                    <li className='hover:text-red-600 text-[18px] text-white transition-all duration-200' onClick={e=>setHam(false)}><Link reloadDocument to={"courses"}>Courses</Link></li>
+                    <li className='hover:text-red-600 text-[18px] text-white transition-all duration-200' onClick={e=>setHam(false)}><Link reloadDocument to={"about"}>About Us</Link></li>
+                    <li className='hover:text-red-600 text-[18px] text-white  transition-all duration-200' onClick={e=>setHam(false)}><Link reloadDocument to={"contact"}>Contact Us</Link></li>
+                    <li  className='hover:text-red-600 text-[18px] text-white  transition-all duration-200' onClick={e=>setHam(false)}><Link reloadDocument to={"faqs"}>Faqs</Link></li>
                 </ul>
                 <div className='flex justify-center items-center gap-6'>
                     <div className="search-bar hidden relative xl:w-80 lg:w-72  h-min cursor-pointer border-2 border-black bg-white rounded-lg lg:flex justify-start gap-2 items-center">
