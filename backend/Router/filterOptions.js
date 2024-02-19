@@ -2,7 +2,7 @@ import express from "express"
 const router = express.Router();
 import Courses from '../CourseData/course.js'
 
-router.get("/filter", async (req, res, next) => {
+router.get("/api/filter", async (req, res, next) => {
     let country = req.query.country  
     const course = req.query.course
     let intake = req.query.intake.slice(0,3)

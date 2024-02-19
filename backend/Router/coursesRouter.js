@@ -2,7 +2,7 @@ import express from "express"
 const router = express.Router();
 import Courses from '../CourseData/course.js'
 
-router.get("/courses", async (req, res, next) => {
+router.get("/api/courses", async (req, res, next) => {
 
     const data = await Courses.aggregate([
         {

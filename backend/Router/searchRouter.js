@@ -4,7 +4,7 @@ import Courses from '../CourseData/course.js'
 import axios from 'axios'
 
 
-router.get("/search", async (req, res, next) => {
+router.get("/api/search", async (req, res, next) => {
     const search = req.query.q
     const data = await Courses.aggregate([
         {

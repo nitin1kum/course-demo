@@ -83,7 +83,7 @@ const Courses = () => {
 
     async function fetchData() {
         setIsLoading(true)
-        await axios.get(`http://localhost:8000/courses`, {
+        await axios.get(`http://localhost:8000/api/courses`, {
         }).then((res) => {
             try {
                 setdata(res.data)

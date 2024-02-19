@@ -1,6 +1,5 @@
 import express from "express";
 import dotenv from "dotenv"
-import fs from "fs"
 import cors from "cors"
 import mongoose from "mongoose"
 const app = express();
@@ -12,10 +11,16 @@ import courseInfo from "./Router/courseInfo.js"
 app.use(cors());
 dotenv.config();
 
-app.get("/search",searchRoute);
-app.get("/filter" , optionRoute)
-app.get("/courses" , coursesRouter)
-app.get("/api/course/data/:id" , courseInfo)
+const corsOptions = {
+    origin: "http://localhost:3000" // frontend URI (ReactJS)
+}
+app.use(express.json());
+app.use(cors(corsOptions));
+
+app.get("/api/search", searchRoute);
+app.get("/api/filter", optionRoute)
+app.get("/api/courses", coursesRouter)
+app.get("/api/course/data/:id", courseInfo)
 
 
 const port = process.env.PORT
