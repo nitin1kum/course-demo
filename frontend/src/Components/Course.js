@@ -16,11 +16,11 @@ const Course = () => {
             address = address[address.length-1];
             data.Country = address;
             setData(data)
-            console.log(data)
         })
         setIsLoading(false)
     }
     useEffect(() => {
+        window.scrollTo(0,0);
       getData()
     }, [])
     
@@ -63,7 +63,7 @@ const Course = () => {
                     </div>
                     <div className="info shadow-[0px_25px_50px_-31px_rgba(0,0,0,0.71)] pb-8 w-full rounded-xl">
                         <h1 className='text-xl mb-1 font-bold px-6'>{data.Course_Name}</h1>
-                        <p className='w-full px-6 h-5 sm:h-fit break-before-auto text-xs sm:text-base overflow-clip '><a href={data.Course_Url} target='_blank' className='course-site text-blue-500 underline'>{data.Course_Url}</a></p>
+                        <p className='w-full px-6 h-4 sm:h-fit break-before-auto text-xs sm:text-base overflow-clip '><a href={data.Course_Url} target='_blank' className='course-site text-blue-500 underline'>{data.Course_Url}</a></p>
                         <div className="fees flex sm:flex-row flex-col gap-4 justify-start sm:justify-between items-start sm:items-center my-3 sm:my-3 px-6">
                             <div className="application-fees flex gap-6 items-center">
                                 <h3 className='text-sm font-medium text-gray-400'>Application Fees:</h3>
@@ -96,7 +96,7 @@ const Course = () => {
                                 <p className='font-medium '>{data.Application_Deadline}</p>
                             </div>
                         </div>
-                        <div className="test-eligibility rounded-lg border-2 overflow-hidden my-4 mx-2 sm:mx-6 border-gray-200">
+                        <div className="test-eligibility rounded-lg border-2 overflow-hidden w-[95%] my-4 mx-auto border-gray-200">
                             <h2 className='bg-sky-200 px-2 sm:px-6 py-2 font-semibold'>Eligibility</h2>
                             <div className="test-container grid grid-cols-1 sm:grid-cols-3 grid-rows-2 gap-6 p-6">
                                 <div>
@@ -125,7 +125,7 @@ const Course = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="standardized-test rounded-lg border-2 overflow-hidden my-4 mx-6 border-gray-200">
+                        <div className="standardized-test rounded-lg border-2 w-[95%]  mx-auto overflow-hidden my-4  border-gray-200">
                             <h2 className='bg-sky-200 px-6 py-2 font-semibold' >Standarized Test Requirement</h2>
                             <div className="tests grid grid-cols-2 sm:grid-cols-3 grid-rows-2 gap-6 p-6">
                                 <div>
@@ -150,7 +150,7 @@ const Course = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="gpa rounded-lg border-2 overflow-hidden my-4 mx-6 border-gray-200">
+                        <div className="gpa rounded-lg border-2 overflow-hidden  w-[95%] my-4 mx-auto border-gray-200">
                             <h2 className='bg-sky-200 px-6 py-2 font-semibold'>Grade Point Average</h2>
                             <p className=' font-medium text-sm text-gray-400 p-6'>{data.GPA}.</p>
                         </div>
