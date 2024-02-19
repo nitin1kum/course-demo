@@ -21,7 +21,7 @@ const Navbar = () => {
         let value = document.getElementById('search-box1').value + document.getElementById('search-box2').value;
         setTimeout(async () => {
             if (value.length > 0) {
-                await axios.get(`http://localhost:8000/api/search?q=${value}`).then((res) => {
+                await axios.get(`https://course-demo.onrender.com/api/search?q=${value}`).then((res) => {
                     data = res.data
                 })
                 document.getElementById('search-box1').value = "";

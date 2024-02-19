@@ -22,7 +22,7 @@ const Home = () => {
     const navigate = useNavigate()
     async function recommended(e){
         let data = []
-        await axios.get(`http://localhost:8000/search?q=${e}`).then((res) => {
+        await axios.get(`https://course-demo.onrender.comhttp://localhost:8000/search?q=${e}`).then((res) => {
             data = res.data
         })
         navigate("/search", { state: { id: 1, data: data, value: e } })

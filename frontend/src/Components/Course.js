@@ -10,7 +10,7 @@ const Course = () => {
 
     async function getData(){
         setIsLoading(true)
-        await axios.get(`http://localhost:8000/api/course/data/${location.state.data}`).then((res)=>{
+        await axios.get(`https://course-demo.onrender.com/api/course/data/${location.state.data}`).then((res)=>{
             let data = res.data;
             let address  = data.Full_Address.split(",");
             address = address[address.length-1];

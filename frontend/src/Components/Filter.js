@@ -197,7 +197,7 @@ const Filter = () => {
             setResults(true);
             setIsLoading(true)
             setResult([])
-            await axios.get(`http://localhost:8000/api/filter`, {
+            await axios.get(`https://course-demo.onrender.com/api/filter`, {
                 params: filterValue
             }).then((res) => {
                 setResult(res.data)
