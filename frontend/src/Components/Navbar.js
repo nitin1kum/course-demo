@@ -71,7 +71,7 @@ const Navbar = () => {
         <>
             <div className={navBg ? `navbar flex justify-between px-6 lg:pt-12 lg:py-0 py-3 fixed top-0 z-50 w-full transition-all duration-300 ease-linear bg-gradient-to-r lg:from-transparent lg:to-transparent from-blue-800 to-sky-600 text-white items-center` :
                 "navbar flex justify-between bg-gradient-to-r px-6 lg:py-6 py-3 fixed top-0 z-50 w-full transition-all duration-300 ease-linear from-blue-800 to-sky-600 text-white items-center"}>
-                <div className="logo h-16">
+                <div className="logo  h-10 lg:h-16">
                     <img className='h-full w-full object-contain' src="images/logo.jpg" alt="" />
                 </div>
                 <ul className='nav-items hidden lg:flex lg:gap-6 xl:gap-8 items-center font-semibold cursor-pointer'>
