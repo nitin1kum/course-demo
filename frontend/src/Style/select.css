@@ -4,8 +4,6 @@
     position: relative;
     border-radius: 6px;
     cursor: pointer;
-    width: -webkit-max-content;
-    width: -moz-max-content;
 }
 
 .custom--dropdown-container .dropdown-input {
